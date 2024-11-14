@@ -5,23 +5,13 @@ import "./App.css";
 import ScrollingTags from "ScrollingTags/ScrollingTags";
 import ScrollTagsTwo from "ScrollingTags/ScrollTagsTwo";
 import CustomizedTimeline from "TimeLine/CustomizedTimeline";
+import { MainAnimation } from "animation/MainAnimation";
+import { mainHeading } from "constants";
+import CustomCursor from "CustomCursor/CustomCursor";
+
 function App() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isCursorVisible, setIsCursorVisible] = useState(true);
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setCursorPosition({ x: e.clientX, y: e.clientY });
-    };
-
-    // Add mousemove listener only if the cursor is visible
-    if (isCursorVisible) {
-      window.addEventListener("mousemove", handleMouseMove);
-    }
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, [isCursorVisible]);
 
   return (
     <Container
@@ -30,14 +20,11 @@ function App() {
       onMouseEnter={() => setIsCursorVisible(true)}
       onMouseLeave={() => setIsCursorVisible(false)}
     >
-      <div
-        className="customCursor"
-        style={{
-          left: `${cursorPosition.x}px`,
-          top: `${cursorPosition.y}px`,
-          opacity: isCursorVisible ? 1 : 0, // Hide cursor if not visible
-        }}
-      ></div>
+      <CustomCursor
+        isCursorVisible={isCursorVisible}
+        setCursorPosition={setCursorPosition}
+        cursorPosition={cursorPosition}
+      />
       <Row>
         <Col
           xs={6}
@@ -45,9 +32,15 @@ function App() {
           className="justify-content-xs-center"
         >
           <p className="white-text ">Hey there!</p>
-          <h1 className="white-text ">
-            I'm Ash, a Full stack developer crafting user-centric design with
-            pixel-perfect precision.
+          <h1
+            className="white-text"
+            style={{
+              fontFamily: "Satoshi, sans-serif",
+              fontWeight: 700,
+              lineHeight: "70px",
+            }}
+          >
+            {mainHeading}
           </h1>
           <p className="white-text">Available to connect (NY, USA)</p>
         </Col>

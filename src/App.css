@@ -1,5 +1,23 @@
+@font-face {
+  font-family: "Satoshi";
+  src:
+    url("./fonts/Satoshi-Regular.woff2") format("woff2"),
+    url("./fonts/Satoshi-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src:
+    url("./fonts/Satoshi-Bold.woff2") format("woff2"),
+    url("./fonts/Satoshi-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
 body {
   background-color: black;
+  font-family: "Satoshi", sans-serif;
 }
 
 .top-height {
@@ -11,16 +29,21 @@ body {
 }
 
 .cursorHidden {
-  cursor: none; /* Hides the native cursor */
+  cursor: none;
   overflow: hidden;
   position: relative;
 }
 .customCursor {
   z-index: 1000;
   position: fixed;
+
   width: 20px; /* Adjust the size as needed */
   height: 20px;
-  background-color: rgb(25, 228, 133); /* Set the custom background color */
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 21, 0.763) 10%,
+    rgba(0, 0, 0, 0.774) 100%
+  );
   border-radius: 50%; /* Makes it circular */
   pointer-events: none; /* Ensures it doesn't interfere with other elements */
   transform: translate(-50%, -50%); /* Centers it on the cursor position */

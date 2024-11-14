@@ -91,63 +91,6 @@ export default function CustomizedTimeline() {
       position="right"
     >
       {companies.map((company, idx) => getTimeLineitem(company, idx))}
-
-      {/* <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography component="span">Infosys</Typography>
-            <Typography
-              style={{
-                color: "grey",
-                fontSize: "14px",
-                marginTop: "3px",
-                marginLeft: "auto",
-              }}
-              color="textSecondary"
-            >
-              04/2023 - present
-            </Typography>
-          </div>
-          <Typography
-            style={{ color: "grey", fontSize: "14px" }}
-            color="textSecondary"
-          >
-            Software developer
-          </Typography>
-        </TimelineContent>
-      </TimelineItem>
-
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-        </TimelineSeparator>
-        <TimelineContent>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography component="span">Infosys</Typography>
-            <Typography
-              style={{
-                color: "grey",
-                fontSize: "14px",
-                marginTop: "3px",
-                marginLeft: "auto",
-              }}
-              color="textSecondary"
-            >
-              04/2023 - present
-            </Typography>
-          </div>
-          <Typography
-            style={{ color: "grey", fontSize: "14px" }}
-            color="textSecondary"
-          >
-            Software developer
-          </Typography>
-        </TimelineContent>
-      </TimelineItem> */}
     </Timeline>
   );
 }
