@@ -1,0 +1,37 @@
+.inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 55px;
+}
+
+.tag {
+  padding: 0.5em 1em;
+  border-radius: 50px;
+  background-color: #1a1a1a; /* Almost black but not entirely black */
+  color: #ffffff;
+  font-size: 0.9em;
+  text-align: center;
+  white-space: nowrap;
+  margin: 0 5px;
+}
+
+.wrapper {
+  position: absolute;
+  display: flex;
+}
+
+.sections {
+  display: flex;
+  animation: swipe-left var(--speed) linear infinite;
+}
+
+@keyframes swipe-left {
+  0% {
+    transform: translate(-100%);
+  }
+
+  100% {
+    transform: translate(0%);
+  }
+}
