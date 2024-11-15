@@ -1,0 +1,89 @@
+.container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-box {
+  width: 150px;
+  height: 150px;
+  background-color: #495753;
+  border-radius: 20px;
+}
+
+.tagAnim {
+  position: absolute;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+.highlight {
+  background-color: #ff6347; /* Change to any highlight color you want */
+  transform: scale(1.1); /* Slightly enlarge the tag */
+  color: #fff; /* Change text color for better contrast */
+}
+
+/* Position each tag */
+.tag-top {
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tag-left {
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tag-right {
+  right: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tag-bottom {
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Custom cursor animation */
+.animated-cursor {
+  position: absolute;
+  width: 20px; /* Adjust size as needed */
+  height: 20px;
+  animation: moveCursor 8s infinite;
+}
+
+@keyframes moveCursor {
+  0% {
+    top: 155px;
+    left: -15px;
+    transform: translateY(-50%);
+  }
+  25% {
+    top: 300px;
+    left: 145px;
+    transform: translateY(-50%);
+  }
+  50% {
+    top: 150px;
+    left: 320px;
+    transform: translateX(-50%);
+  }
+  75% {
+    top: 5px;
+    left: 160px;
+    transform: translateX(-50%);
+  }
+  100% {
+    top: 155px;
+    left: -15px;
+    transform: translateY(-50%);
+  }
+}

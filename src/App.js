@@ -44,7 +44,9 @@ function App() {
           </h1>
           <p className="white-text">Available to connect (NY, USA)</p>
         </Col>
-        <Col xs={6} className="white-text d-flex justify-content-center"></Col>
+        <Col xs={6} className="white-text d-flex justify-content-center">
+          <MainAnimation />
+        </Col>
       </Row>
       <Row className="g-0">
         <Col xs={4} className="white-text">
