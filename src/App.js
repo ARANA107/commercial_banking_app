@@ -73,8 +73,30 @@ function App() {
             <Col xs={12} className="d-flex justify-content-center">
               <div className="timeline-container">
                 <h2 className="timeline-title">Tech stack</h2>
-                <p>Toolsiahfj aoisf oasjnof jajiof oasn </p>
-                <p>aihfidsbvkhsdknsdndsfbkdbikb</p>
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  <img
+                    className="tech-skills-logo"
+                    src="react.png"
+                    alt="react"
+                  />
+                  <img
+                    className="tech-skills-logo"
+                    src="spring.jpg"
+                    alt="spring"
+                  />
+                  <img className="tech-skills-logo" src="sql.jpg" alt="sql" />
+                  <img
+                    className="tech-skills-logo"
+                    src="figma.webp"
+                    alt="figma"
+                  />
+                </div>
               </div>
             </Col>
           </Row>

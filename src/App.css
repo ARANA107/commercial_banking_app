@@ -103,3 +103,9 @@ body {
   border-radius: 50%; /* Keep the border circular */
   pointer-events: none; /* Ensure border doesn’t interfere with interactions */
 }
+
+.tech-skills-logo {
+  width: 65px;
+  height: 60px;
+  border-radius: 30px;
+}

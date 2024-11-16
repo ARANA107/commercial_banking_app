@@ -3,7 +3,7 @@ import "./ScrollTagsTwo.css";
 
 const ScrollingTagsTwo = () => {
   const speed = 10000;
-  const arr = ["ok", "is", "something", "kiolop"];
+  const arr = ["Design", "TDD", "Optimization", "Leadership"];
   return (
     <div className="inner">
       <div className="wrapper">

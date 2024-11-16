@@ -3,7 +3,7 @@ import "./ScrollingTags.css";
 
 const ScrollingTags = () => {
   const speed = 10000;
-  const arr = ["div", "is", "something", "ok"];
+  const arr = ["React", "SpringBoot", "Mongo", "MySql"];
   return (
     <div className="inner">
       <div className="wrapper">
