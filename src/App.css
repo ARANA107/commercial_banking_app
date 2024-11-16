@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "Satoshi";
+  src:
+    url("./fonts/Satoshi-Regular.woff2") format("woff2"),
+    url("./fonts/Satoshi-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src:
+    url("./fonts/Satoshi-Bold.woff2") format("woff2"),
+    url("./fonts/Satoshi-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  background-color: black;
+  font-family: "Satoshi", sans-serif;
+}
+
+.top-height {
+  padding-top: 10vh;
+}
+
+.white-text {
+  color: white;
+}
+
+.cursorHidden {
+  cursor: none;
+  overflow: hidden;
+  position: relative;
+}
+.customCursor {
+  z-index: 1000;
+  position: fixed;
+
+  width: 20px; /* Adjust the size as needed */
+  height: 20px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 21, 0.763) 10%,
+    rgba(0, 0, 0, 0.774) 100%
+  );
+  border-radius: 50%; /* Makes it circular */
+  pointer-events: none; /* Ensures it doesn't interfere with other elements */
+  transform: translate(-50%, -50%); /* Centers it on the cursor position */
+  transition:
+    opacity 0.2s ease,
+    transform 0.1s ease; /* Smooth trailing and fade effect */
+}
+.timeline-container {
+  background-color: rgba(40, 39, 39, 0.522);
+  border-radius: 24px;
+  box-shadow:
+    rgba(255, 255, 255, 0.024) 0px 0.362176px 0.651917px -1px inset,
+    rgba(255, 255, 255, 0.035) 0px 3px 5.4px -2px inset;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  color: white;
+  will-change: auto;
+  padding: 30px 20px 20px 30px;
+}
+
+.timeline-title {
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.years {
+  font-size: 14px;
+  font-weight: 400;
+  color: #888;
+  margin-left: 10px;
+}
+
+.custom-gray {
+  background-color: var(--bs-gray-500); /* A medium shade of gray */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dot::before {
+  content: "";
+  position: absolute; /* Position it relative to the container */
+  top: -5px; /* Move the border outside */
+  left: -5px; /* Move the border outside */
+  right: -5px; /* Move the border outside */
+  bottom: -5px; /* Move the border outside */
+  border: 2px dashed rgba(95, 252, 139, 1); /* Dashed border with lower opacity */
+  border-radius: 50%; /* Keep the border circular */
+  pointer-events: none; /* Ensure border doesn’t interfere with interactions */
+}
+
+.tech-skills-logo {
+  width: 65px;
+  height: 60px;
+  border-radius: 30px;
+}
